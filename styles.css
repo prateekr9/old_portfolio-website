@@ -1,0 +1,466 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+body {
+	font-family: 'oswald', sans-serif;
+	color: white;
+}
+
+button:focus {
+	outline: none;
+}
+
+.navbar {
+	padding: 15px;
+	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+	box-shadow: 2px 17px 40px -6px rgba(0, 0, 0, 0.30);
+}
+
+.navbar-toggler {
+	color: black;
+	border: none;
+}
+
+.navbar .navbar-brand {
+	font-size: 25px;
+}
+
+.navbar .nav-item {
+	font-size: 20px;
+	padding-right: 20px;
+}
+
+#hero {
+	height: 100%;
+	padding: 110px 0px;
+	background-image: url(img/d.jpg);
+}
+
+#hero h1 {
+	font-size: 15px;
+	letter-spacing: 5px;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+#hero .row {
+	border-left: .2rem solid #ffff69;
+	border-right: .2rem solid #ffff69;
+	border-bottom: .2rem solid #ffff69;
+	border-top: .2rem solid #ffff69;
+	border-radius: .3rem;
+	box-shadow: 2px 17px 40px -6px rgba(0, 0, 0, 0.50);
+}
+
+#hero .window {
+	padding: 20px;
+	background-image: url(img/c.jpg);
+	min-height: 370px;
+}
+
+#hero .mypic {
+	padding: 20px 50px 20px;
+	background-image: url(img/c.jpg);
+}
+
+#hero .mypic img {
+	width: inherit;
+	box-shadow: 0px 0px 15px 0px rgba(255, 195, 113, 1);
+}
+
+#hero p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 29px;
+	margin-bottom: 5px;
+	color: white;
+}
+
+@media only screen and (max-width: 400px) {
+	#hero .mypic {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+	#hero .mypic {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	#hero .mypic {
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#hero .mypic {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+}
+
+#mywork {
+	background: linear-gradient(to top, #3c3b3f, #605c3c);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 60px;
+}
+
+#mywork h3 {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+#mywork p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-bottom: 2px;
+	color: white;
+}
+
+#mywork .center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#mywork .main {
+	width: 100%;
+	height: 50vh;
+}
+
+#mywork .card {
+	width: 250px;
+	height: 300px;
+	position: relative;
+	font-size: 2rem;
+	color: white;
+	border-radius: 5px;
+	background: linear-gradient(to top, #3c3b3f, #605c3c);
+	
+}
+
+#mywork .front,
+.back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+}
+
+#mywork .front {
+	background-color: #ff6961;
+	backface-visibility: hidden;
+	transform: perspective(600px) rotateY(0deg);
+	transition: all 1s;
+	padding: 20px;
+}
+
+#mywork .back {
+	background-color: #ffb347;
+	padding: 30px;
+	backface-visibility: hidden;
+	transform: perspective(600px) rotateY(180deg);
+	transition: all 1s;
+}
+
+#mywork .card:hover > .front {
+	transform: perspective(600px) rotateY(-180deg)
+}
+
+#mywork .card:hover > .back {
+	transform: perspective(600px) rotateY(0deg)
+}
+
+#mywork h2 {
+	font-family: 'Merienda', cursive;
+	color: black;
+	text-align: center;
+	font-weight: 700;
+	font-size: 35px;
+}
+
+#mywork .emoji {
+	text-align: center;
+}
+
+#skills {
+	background-image: url(img/x.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 0px;
+}
+
+#skills h1 {
+	text-align: center;
+	font-size: 17px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
+}
+
+#skills ul li {
+	font-family: 'poppins', monospace;
+	font-size: 16px;
+}
+
+#contact {
+	font-family: 'roboto', sans-serif;
+	font-weight: 100;
+	text-align: center;
+	font-size: 25px;
+	color: black;
+	padding: 25px;
+}
+
+#contact h1 {
+	font-size: 25px;
+}
+
+#contact .social a {
+	color: black;
+	padding: 20px;
+	font-size: 18px;
+}
+
+#contact i {
+	font-size: 38px;
+}
+
+#contact .emtel {
+	font-size: 20px;
+	padding: 5px;
+	color: black;
+}
+
+#contact .mail {
+	font-size: 18px;
+	padding-top: 30px;
+}
+
+#contact .copyright {
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#form {
+	padding: 80px 0px;
+	background-image: url(img/a.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#form h1 {
+	font-family: 'Inconsolata', monospace;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: white;
+	letter-spacing: 3px;
+	text-align: center;
+	padding: 20px;
+}
+
+*:focus {
+	outline: none;
+}
+
+#form input::placeholder,
+textarea::placeholder {
+	font-family: 'Source Code Pro', monospace;
+	text-transform: uppercase;
+	font-size: 17px;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+#blog-header {
+	padding-top: 130px;
+	padding-bottom: 40px;
+}
+
+#blog-header h1 {
+	font-family: 'Merienda', cursive;
+	color: black;
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+#blog-header .emoji {
+	font-size: 40px;
+	text-align: center;
+}
+
+#blog {
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-bottom: 2rem;
+	color: black;
+}
+
+#blog .box {
+	padding: 0px 50px;
+}
+
+#blog .blog-thumb {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+#blog .post-format {
+	padding-bottom: 10px;
+}
+
+#blog .post-format span {
+	color: #888;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding-right: 10px;
+}
+
+#blog .blog-thumb .btn {
+	background: #111112;
+	color: white;
+	border-radius: 5px;
+	padding: 10px 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-top: 22px;
+	transition: all 0.4s ease-in-out;
+}
+
+#blog .blog-thumb .btn:hover {
+	background: #888;
+	border-color: transparent;
+	color: #ffffff;
+}
+
+#blog .hrule {
+	border-width: 2px;
+	border-color: black;
+}
+
+#intro {
+	padding-top: 130px;
+	padding-bottom: 20px;
+}
+
+#intro h1 {
+	font-family: 'Merienda', cursive;
+	color: black;
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+#intro .emoji {
+	font-size: 40px;
+	text-align: center;
+}
+
+#profile {
+	font-family: 'Josefin Sans', sans-serif;
+	color: black;
+	padding: 30px 0px;
+}
+
+#profile .col-lg-8 {
+	margin-bottom: 40px;
+}
+
+#profile h1 {
+	font-size: 35x;
+	text-align: left;
+	font-family: 'Bebas Neue', cursive;
+}
+
+#profile h2 {
+	font-family: 'Arimo', sans-serif;
+	font-size: 25px;
+	;
+}
+
+#profile h3 {
+	font-family: 'Arimo', sans-serif;
+	font-size: 15px;
+	color: #ccc;
+}
+
+#profile .col-lg-8 p {
+	font-family: 'poppins', monospace;
+	font-size: 15px;
+}
+
+#profile .btn {
+	background: #111112;
+	color: white;
+	border-radius: 15px;
+	padding: 10px 28px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	transition: all 0.4s ease-in-out;
+}
+
+#profile .btn:hover {
+	background: #888;
+	border-color: transparent;
+	color: #ffffff;
+}
+
+#profile .hrule {
+	border-width: 2px;
+	border-color: black;
+}
+
+#coming {
+	background-image: url(img/g.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 0px;
+}
+
+#coming h2 {
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
+}
